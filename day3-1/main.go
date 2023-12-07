@@ -54,7 +54,7 @@ func isPartNum(grid [][]rune, row, start, end int) bool {
 	hi := min(end+1, len(grid[0]))
 
 	for i := lo; i < hi; i++ {
-		if row-1 >= 0 && isSymbol(grid, row-1, lo) {
+		if row-1 >= 0 && isSymbol(grid, row-1, i) {
 			return true
 		}
 		if row+1 < len(grid) && isSymbol(grid, row+1, i) {
